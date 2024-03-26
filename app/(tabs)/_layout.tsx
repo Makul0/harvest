@@ -13,7 +13,8 @@ function TabBarIcon(props: {
   name: React.ComponentProps<typeof Ionicons>['name'];
   color: string;
 }) {
-  return <Ionicons size={28} style={{ marginBottom: -3 }} {...props} />;
+  return <Ionicons size={28} style={{ marginBottom: -3
+    , marginTop: 10 }} {...props} />;
 }
 
 export default function TabLayout() {
@@ -31,7 +32,7 @@ export default function TabLayout() {
         name="index"
         options={{
           title: '',
-          tabBarIcon: ({ color }) => <TabBarIcon name="home" color="grey" />,
+          tabBarIcon: ({ color }) => <TabBarIcon name="home" color="#EFE3C8" />,
           headerRight: () => (
             <Link href="/modal" asChild>
               <Pressable>
@@ -52,21 +53,21 @@ export default function TabLayout() {
         name="two"
         options={{
           title: '',
-          tabBarIcon: ({ color }) => <TabBarIcon name="cart" color="grey"/>,
+          tabBarIcon: ({ color }) => <TabBarIcon name="cart" color="#EFE3C8"/>,
         }}
       />
       <Tabs.Screen
         name="three"
         options={{
           title: '',
-          tabBarIcon: ({ color }) => <TabBarIcon name="heart" color="grey"/>,
+          tabBarIcon: ({ color }) => <TabBarIcon name="heart" color="#EFE3C8"/>,
         }}
       />
       <Tabs.Screen
         name="four"
         options={{
           title: '',
-          tabBarIcon: ({ color }) => <FontAwesome name="bell" size={24} color="grey" />,
+          tabBarIcon: ({ color }) => <FontAwesome name="bell" size={24} color="#EFE3C8" />,
         }}
       />
     </Tabs>
